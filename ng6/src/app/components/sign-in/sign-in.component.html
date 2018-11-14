@@ -1,15 +1,11 @@
 <h1>Sign In</h1>
 
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
+<form (submit)="loginUser($event)">
+  <input type="text" placeholder="Username" id="username">
+  <input type="password" placeholder="Password" id="password">
+  <input type="submit" value="Submit">
+</form>
 
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
-
-  <div class="example-button-row">
-    <button mat-raised-button>Log In</button>
-  </div>
-</div>
+<!-- <div class="example-button-row">
+  <button mat-raised-button>Log In</button>
+</div> -->
