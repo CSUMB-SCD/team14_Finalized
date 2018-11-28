@@ -1,11 +1,20 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Home Page</span>
-      <span class="example-spacer"></span>
-      <a mat-button routerLink="home">Home</a>
-      <a mat-button routerLink="home">Products</a>
-      <a mat-button routerLink="home">Cart</a>
-      <a mat-button routerLink="signin">User Sign-In</a>
+      <!-- <span>Home Page</span> -->
+      <span class="example-spacer">
+        <div class="home-nav">
+          <a mat-button routerLink="home">Home</a>
+        </div>
+        <div class ="signin-nav">
+          <a mat-button routerLink="signin">User Sign-In</a>
+        </div>
+        <div class="search-nav">
+          <a mat-button routerLink="search">Search</a>
+        </div>
+        <div class="cart-nav">
+          <a mat-button routerLink="cart">Cart</a>
+        </div>
+      </span>
 
       <!-- <mat-icon class="example-icon"><a routerLink="home">home</a></mat-icon> -->
       <!-- <mat-icon class="example-icon" [matMenuTriggerFor]="menu">menu</mat-icon> -->

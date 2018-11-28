@@ -1,28 +1,14 @@
-.example-icon {
-  padding: 0 14px;
-  cursor: pointer;
-}
+// .example-icon {
+//   padding: 0 14px;
+//   cursor: pointer;
+// }
 
 // spacing on navbar
 .example-spacer {
-  justify-content: baseline;
-}
-
-// for button
-.example-button-row button,
-.example-button-row a {
-  margin-right: 8px;
-}
-
-// for form field
-.example-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .example-container > * {
   width: 100%;
 }
-// .example-spacer {
-//   flex:1 1 auto;
-// }

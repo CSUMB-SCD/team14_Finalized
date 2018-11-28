@@ -1,0 +1,18 @@
+.signin-box{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  // border-style: solid;
+  // border-color: #ffffff;
+  // border-width: 5px;
+}
+.signin-title{
+  display: flex;
+  flex-direction: column;
+}
+.signin-input{
+  display: flex;
+  flex-direction: column;
+  width:20%;
+}
