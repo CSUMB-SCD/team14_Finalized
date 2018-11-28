@@ -2,16 +2,28 @@
   <div class="signin-title">
     <h1>Sign In</h1>
   </div>
+
+  <!-- Login -->
   <div class="signin-input">
+    <form (submit)="loginUser($event)" action="/home">
+      <!-- Get Username -->
       <mat-form-field>
           <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
       </mat-form-field>
+
+      <!-- Get Password-->
       <mat-form-field>
           <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
       </mat-form-field>
-  </div>
-  <div class="signin-btn">
+
+      <!-- Login Button -->
       <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
+    </form>
+
+    <!-- Invalid Login Error -->
+    <div *ngIf="!is_login_valid">
+      <h3>Login is INVALID</h3>
+    </div>
   </div>
 
 </div>
