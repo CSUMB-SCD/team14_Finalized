@@ -1,3 +1,4 @@
+import { HttpClientModule} from '@angular/common/http';
 import { MaterialModule } from './material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,8 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
