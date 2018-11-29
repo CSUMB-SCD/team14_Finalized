@@ -8,9 +8,15 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  color: black;
 }
 .search-btn{
   display: flex;
   justify-content: center;
   align-self: center;
+}
+
+.search-items {
+  color:black;
+  text-align: center;
 }
