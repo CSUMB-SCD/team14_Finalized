@@ -1,3 +1,4 @@
+import { UsersService } from './users.service';
 import { Component } from '@angular/core';
 
 
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng6';
+  constructor(private userSVC: UsersService) {}
 }
