@@ -8,7 +8,9 @@ import { User } from './user';
 })
 export class UsersService {
   private baseURL = 'https://springbootusersdb.herokuapp.com/rest/users';
-  constructor(private http: HttpClient) { }
+  mainUser: User;
+  constructor(private http: HttpClient) {
+  }
 
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.baseURL + '/all');

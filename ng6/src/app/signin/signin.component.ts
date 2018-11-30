@@ -36,12 +36,11 @@ export class SigninComponent implements OnInit {
       if (user.userName === passed_in_un && user.password === passed_in_pw) {
         this.is_login_valid = true;
         this.router.navigate(['/home']);
+        this.userSVC.mainUser = user;
         break;
       }
       this.is_login_valid = false;
     }
-
-
 
     // Press Option + Command + i (Access Tools for debugging in Chrome)
     console.log('Username: ', passed_in_un, 'Password: ', passed_in_pw);
