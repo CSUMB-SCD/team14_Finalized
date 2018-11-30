@@ -1,5 +1,6 @@
 import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../user';
 
 @Component({
@@ -13,7 +14,7 @@ export class SigninComponent implements OnInit {
   allUsers: User[];
 
   // Open the Chrome Debugger to see the possible Usernames and Passwords
-  constructor(private userSVC: UsersService) {
+  constructor(private userSVC: UsersService, private router: Router) {
     this.is_login_valid = true;
     this.userSVC.getAllUsers().subscribe(data => {
       this.allUsers = data;
@@ -31,9 +32,10 @@ export class SigninComponent implements OnInit {
     const passed_in_un = target.querySelector('#username').value;
     const passed_in_pw = target.querySelector('#password').value;
 
-    for (let user of this.allUsers) {
+    for (const user of this.allUsers) {
       if (user.userName === passed_in_un && user.password === passed_in_pw) {
         this.is_login_valid = true;
+        this.router.navigate(['/home']);
         break;
       }
       this.is_login_valid = false;
