@@ -29,6 +29,8 @@ export class SigninComponent implements OnInit {
       this.is_login_valid = false;
     }
 
+
+
     // Press Option + Command + i (Access Tools for debugging in Chrome)
     console.log('Username: ', passed_in_un, 'Password: ', passed_in_pw);
     console.log('Valid: ', this.is_login_valid);

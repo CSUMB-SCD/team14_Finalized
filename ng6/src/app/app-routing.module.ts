@@ -5,20 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SigninComponent } from './signin/signin.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: HomeComponent
   },
   {
     path: 'signin',
     component: SigninComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
   },
   {
     path: 'search',
@@ -27,6 +29,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
