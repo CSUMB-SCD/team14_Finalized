@@ -1,4 +1,6 @@
+import { UsersService } from './../users.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-signin',
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class SigninComponent implements OnInit {
 
   is_login_valid: boolean;
+  allUsers: User[];
 
-  constructor() {
+  // Open the Chrome Debugger to see the possible Usernames and Passwords
+  constructor(private userSVC: UsersService) {
     this.is_login_valid = true;
+    this.userSVC.getAllUsers().subscribe(data => {
+      this.allUsers = data;
+      console.log(data);
+    });
   }
 
   ngOnInit() {
@@ -23,9 +31,11 @@ export class SigninComponent implements OnInit {
     const passed_in_un = target.querySelector('#username').value;
     const passed_in_pw = target.querySelector('#password').value;
 
-    if (passed_in_un === 'admin' && passed_in_pw === 'admin') {
-      this.is_login_valid = true;
-    } else {
+    for (let user of this.allUsers) {
+      if (user.userName === passed_in_un && user.password === passed_in_pw) {
+        this.is_login_valid = true;
+        break;
+      }
       this.is_login_valid = false;
     }
 
