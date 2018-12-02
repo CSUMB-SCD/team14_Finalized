@@ -10,6 +10,7 @@ export class UsersService {
   private baseURL = 'https://springbootusersdb.herokuapp.com/rest/users';
   mainUser: User;
   constructor(private http: HttpClient) {
+    this.mainUser = null;
   }
 
   getAllUsers(): Observable<User[]> {

@@ -1,3 +1,4 @@
+import { ItemsService } from './../items.service';
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 
@@ -8,8 +9,8 @@ import { UsersService } from '../users.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private userSVC: UsersService) {
-    console.log(userSVC.mainUser.userName + ' ' + userSVC.mainUser.password);
+  constructor(public userSVC: UsersService) {
+    // console.log(userSVC.mainUser.cart.length);
   }
 
   ngOnInit() {

@@ -19,13 +19,15 @@
     <td>Description: {{item.description}}</td>
   </tr>
 </table> -->
+
 <div class="search-items" *ngFor="let item of allItems">
   <h3>{{item.name}}</h3><br>
   <img src='{{item.image}}' height="300" widtd="200" class="center"><br>
-  <select>
+  Description: {{item.description}}<br>
+  Price: ${{item.price}}<br>
+  <select id="{{item.id}}">
     Quantity:<option *ngFor="let quant of item.quant_arr" value={{quant}}>{{quant}}</option>
   </select>
-  Price: ${{item.price}}<br>
-  Description: {{item.description}}<br>
-  <button>Add To Cart</button>
+  <br>
+  <button (click)="addToCart(item)">Add To Cart</button>
 </div>
