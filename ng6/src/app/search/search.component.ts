@@ -27,22 +27,26 @@ export class SearchComponent implements OnInit {
   }
 
   addToCart(item: Item) {
+    console.log('Button Clicked');
     if (this.userSVC.mainUser != null) {
+      console.log(item.id);
       const quant = $('#' + item.id).val();
       let updated =  false;
       for (const itm of this.userSVC.mainUser.cart) {
         if (itm.id === item.id) {
-          item.stock = Number(quant);
-          item.totalPrice = item.price * Number(quant);
+          itm.stock = Number(quant);
+          // item.totalPrice = item.price * Number(quant);
           updated = true;
+          this.userSVC.updateUser(this.userSVC.mainUser).subscribe(data => {console.log(data); });
           break;
         }
       }
 
       if (!updated) {
         item.stock = Number(quant);
-        item.totalPrice = item.price * Number(quant);
+        // item.totalPrice = item.price * Number(quant);
         this.userSVC.mainUser.cart.push(item);
+        this.userSVC.updateUser(this.userSVC.mainUser).subscribe(data => {console.log(data); });
       }
     } else {
       alert('Login - In To Add Items To Cart');
