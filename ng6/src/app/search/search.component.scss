@@ -5,10 +5,10 @@
 }
 .search-input{
   display:flex;
+  flex: auto;
   justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  color: black;
+  width: 100%;
+
 }
 .search-btn{
   display: flex;
@@ -17,6 +17,7 @@
 }
 
 .search-items {
+  // display: flex;
   color:black;
   text-align: center;
 }
