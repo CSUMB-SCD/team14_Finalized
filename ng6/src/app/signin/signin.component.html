@@ -1,20 +1,55 @@
-<div class="signin-box">
+<!-- <div class="signin-box">
   <div class="signin-title">
     <h1>Sign In</h1>
-  </div>
+  </div> -->
+<!-- Login -->
+<!-- <div class="signin-input">
+  <form (submit)="loginUser($event)" action="/home"> -->
+    <!-- Get Username -->
+    <!-- <mat-form-field>
+        <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
+    </mat-form-field> -->
 
+<<<<<<< Updated upstream
   <!-- Login -->
   <div class="signin-input">
     <form (submit)="loginUser($event)">
       <!-- Get Username -->
-      <mat-form-field>
-          <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
-      </mat-form-field>
+=======
+    <!-- Get Password-->
+    <!-- <mat-form-field>
+        <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
+    </mat-form-field> -->
 
-      <!-- Get Password-->
+    <!-- Login Button -->
+    <!-- <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
+  </form>
+</div> -->
+    <!-- Invalid Login Error -->
+    <!-- <div *ngIf="!is_login_valid">
+      <h3>Login is INVALID</h3>
+    </div>
+</div> -->
+
+<div class="signin-header">
+  <h1>Sign In</h1>
+</div>
+
+<div class="signin-input">
+  <form (submit)="loginUser($event)" action="/home">
+    <!-- Get Username -->
+    <div class="user-field">
+>>>>>>> Stashed changes
       <mat-form-field>
-          <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
+        <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
       </mat-form-field>
+    </div>
+    <!-- Get Password -->
+    <div class="pass-field">
+      <mat-form-field>
+        <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
+      </mat-form-field>
+<<<<<<< Updated upstream
 
       <!-- Login Button -->
       <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
@@ -26,7 +61,17 @@
     <!-- Invalid Login Error -->
     <div *ngIf="!is_login_valid">
       <h3>Login is INVALID</h3>
+=======
+>>>>>>> Stashed changes
     </div>
-  </div>
+   <!-- Login Button -->
+   <div class="login-field">
+      <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
+   </div>
+  </form>
+</div>
 
+<!-- Invalid Login Error -->
+<div *ngIf="!is_login_valid" class="error-field">
+  <h3>Login is INVALID</h3>
 </div>
