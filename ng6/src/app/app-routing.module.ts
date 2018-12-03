@@ -3,17 +3,12 @@ import { SearchComponent } from './search/search.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { SigninComponent } from './signin/signin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
   {
     path: 'home',
     component: HomeComponent
@@ -23,12 +18,21 @@ const routes: Routes = [
     component: SigninComponent
   },
   {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
     path: 'search',
     component: SearchComponent
   },
   {
     path: 'cart',
     component: CartComponent
+  },
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
   },
   {
     path: '**',
