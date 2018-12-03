@@ -10,12 +10,10 @@
         <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
     </mat-form-field> -->
 
-<<<<<<< Updated upstream
   <!-- Login -->
-  <div class="signin-input">
-    <form (submit)="loginUser($event)">
+  <!-- <div class="signin-input">
+    <form (submit)="loginUser($event)"> -->
       <!-- Get Username -->
-=======
     <!-- Get Password-->
     <!-- <mat-form-field>
         <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
@@ -39,7 +37,6 @@
   <form (submit)="loginUser($event)" action="/home">
     <!-- Get Username -->
     <div class="user-field">
->>>>>>> Stashed changes
       <mat-form-field>
         <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
       </mat-form-field>
@@ -49,25 +46,24 @@
       <mat-form-field>
         <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
       </mat-form-field>
-<<<<<<< Updated upstream
 
       <!-- Login Button -->
-      <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
-    </form>
+      <!-- <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
+    </form> -->
 
     <!-- Routing to: Register page -->
-    <a mat-button [routerLink]="['/register']">Register</a>
+
 
     <!-- Invalid Login Error -->
-    <div *ngIf="!is_login_valid">
-      <h3>Login is INVALID</h3>
-=======
->>>>>>> Stashed changes
+    <!-- <div *ngIf="!is_login_valid">
+      <h3>Login is INVALID</h3> -->
     </div>
    <!-- Login Button -->
    <div class="login-field">
       <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
+      <a mat-button [routerLink]="['/register']" mat-raised-button color="primary">Register</a>
    </div>
+
   </form>
 </div>
 
