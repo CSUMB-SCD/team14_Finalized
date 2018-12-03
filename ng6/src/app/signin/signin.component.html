@@ -20,6 +20,9 @@
       <button type="submit" value="Submit" mat-raised-button color="primary">Login</button>
     </form>
 
+    <!-- Routing to: Register page -->
+    <a mat-button [routerLink]="['/register']">Register</a>
+
     <!-- Invalid Login Error -->
     <div *ngIf="!is_login_valid">
       <h3>Login is INVALID</h3>
