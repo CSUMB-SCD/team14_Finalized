@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
-<<<<<<< Updated upstream
-    <mat-toolbar-row>
+<!-- <<<<<<< Updated upstream -->
+    <!-- <mat-toolbar-row> -->
       <!-- <span>Home Page</span> -->
-      <span class="example-spacer">
+      <!-- <span class="example-spacer">
         <div class="home-nav">
           <a mat-button routerLink="home">Home</a>
         </div>
@@ -15,8 +15,8 @@
         </div>
         <div class="cart-nav">
           <a mat-button routerLink="cart">Cart</a>
-        </div>
-=======
+        </div> -->
+<!-- ======= -->
   <!-- aligns text on left of toolbar -->
   <span>Car Shop</span>
 
@@ -27,7 +27,7 @@
       </span>
       <span>
           <a mat-button routerLink="search">Search <mat-icon aria-label>search</mat-icon></a>
->>>>>>> Stashed changes
+<!-- >>>>>>> Stashed changes -->
       </span>
       <span>
           <a mat-button routerLink="cart">Cart <mat-icon aria-label>shopping_cart</mat-icon></a>
@@ -36,7 +36,8 @@
 
   <!-- aligns text on right of toolbar -->
   <span>
-      <a mat-button routerLink="signin">Sign In <mat-icon aria-label>account_circle</mat-icon></a>
+      <a mat-button routerLink="signin" *ngIf="userSVC.mainUser == null">Sign In <mat-icon aria-label>account_circle</mat-icon></a>
+      <a mat-button (click)="logout()" *ngIf="userSVC.mainUser != null">Logout</a>
   </span>
 </mat-toolbar>
 
