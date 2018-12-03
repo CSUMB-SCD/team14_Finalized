@@ -1,25 +1,21 @@
-<form class="example-form" (submit)="register_user($event)">
-  <table class="example-full-width" cellspacing="0">
-    <tr>
-      <td>
-        <mat-form-field class="example-full-width">
-          <input matInput id="username" placeholder="Username">
-        </mat-form-field>
-      </td>
-      <td>
-        <mat-form-field class="example-full-width">
-          <input matInput id="password" placeholder="Password">
-        </mat-form-field>
-      </td>
-    </tr>
-  </table>
-
-  <button type="submit" value="Submit" mat-raised-button color="primary">Register</button>
-</form>
-<a mat-button [routerLink]="['/signin']">cancel</a>
-
-
 <div class="register-header">
-    <h1>Sign Up</h1>
-  </div>
-  
+    <h1>Register</h1>
+</div>
+<form class="register-form" (submit)="register_user($event)">
+    <div class="user-field">
+      <mat-form-field>
+        <input type="text" id="username" placeholder="Username" matInput placeholder="Username">
+      </mat-form-field>
+    </div>
+
+    <div class="pass-field">
+      <mat-form-field>
+        <input type="password" id="password" placeholder="Password" matInput placeholder="Password">
+      </mat-form-field>
+    </div>
+    <div class="register-btn">
+        <button type="submit" value="Submit" mat-raised-button color="primary">Register</button>
+        <a mat-button [routerLink]="['/signin']" mat-raised-button color="primary">Cancel</a>
+    </div>
+</form>
+
