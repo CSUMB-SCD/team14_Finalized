@@ -6,7 +6,8 @@
           <a mat-button routerLink="home">Home</a>
         </div>
         <div class ="signin-nav">
-          <a mat-button routerLink="signin">User Sign-In</a>
+          <a mat-button routerLink="signin" *ngIf="userSVC.mainUser == null">Sign In</a>
+          <a mat-button (click)="logout()" href="#" *ngIf="userSVC.mainUser != null">Logout</a>
         </div>
         <div class="search-nav">
           <a mat-button routerLink="search">Search</a>
