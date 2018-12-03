@@ -20,8 +20,8 @@
   </tr>
 </table> -->
 
+
 <div class="search-items" *ngFor="let item of itemSVC.allItems">
-<!-- <div class="search-items" *ngFor="let item of allItems"> -->
   <h3>{{item.name}}</h3><br>
   <img src='{{item.image}}' height="300" widtd="200" class="center"><br>
   Description: {{item.description}}<br>
@@ -33,3 +33,23 @@
   <br>
   <button *ngIf="item.stock != 0" (click)="addToCart(item)">Add To Cart</button>
 </div>
+
+<!-- <div class="search-items" *ngFor="let item of itemSVC.allItems">
+  <h3>{{item.name}}</h3>
+  <div class="images">
+      <img src='{{item.image}}' height="300" widtd="200">
+  </div>
+  <div class="details">
+    Description: {{item.description}}<br>
+    Price: {{item.price}}<br>
+  </div>
+</div> -->
+<!-- <mat-form-field>
+  <div *ngFor="let item of itemSVC.allItems">
+      <mat-select placeholder="select" *ngIf="item.stock != 0" id="{{item.id}}">
+          Quantity:<mat-option *ngFor="let quant of item.quant_arr" value={{quant}}>{{quant}}</mat-option>
+        </mat-select>
+  </div>
+</mat-form-field> -->
+
+
