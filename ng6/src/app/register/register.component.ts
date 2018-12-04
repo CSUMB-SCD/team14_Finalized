@@ -15,12 +15,14 @@ export class RegisterComponent implements OnInit {
   allUsers: User[]; // Testing: Checking Registered user
   is_un_missing: boolean;
   is_pw_missing: boolean;
+  is_un_taken: boolean;
 
   constructor(private userSVC: UsersService, private router: Router) {
     this.userSVC.getAllUsers().subscribe(data => {
       this.allUsers = data;
       console.log(data);
     });
+    this.is_un_taken = false;
   }
 
   ngOnInit() {
@@ -29,7 +31,6 @@ export class RegisterComponent implements OnInit {
   private validate_info(passed_in_username: string, passed_in_password: string) {
     let n: number;
     let user: User;
-    let is_un_taken: boolean;
     let is_info_empty: boolean;
 
     n = this.allUsers.length;
@@ -46,9 +47,9 @@ export class RegisterComponent implements OnInit {
     //  - Matching Usernames
     for (let i = 0; i < n; ++i) {
       user = this.allUsers[i];
-      is_un_taken = user.userName === passed_in_username;
+      this.is_un_taken = user.userName === passed_in_username;
 
-      if (is_un_taken) {
+      if (this.is_un_taken) {
         return true;
       }
     }

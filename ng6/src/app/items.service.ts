@@ -8,6 +8,7 @@ import { Item } from './items';
 })
 export class ItemsService {
   private baseURL = 'https://springbootitemsdb.herokuapp.com/items';
+  showItemDetail: Item;
   allItems: Item[];
 
   constructor(private http: HttpClient) {

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from '../items';
 import { UsersService } from '../users.service';
 import * as $ from 'jquery';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,7 @@ import * as $ from 'jquery';
 export class SearchComponent implements OnInit {
 
   // allItems: Item[];
-  constructor(public itemSVC: ItemsService, private userSVC: UsersService) {
+  constructor(public itemSVC: ItemsService, private userSVC: UsersService, private router: Router) {
     // this.itemsvc.getAllItems().subscribe(data => {
     //   this.allItems = data;
     //   let a = 0;
@@ -25,6 +26,11 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.itemSVC.itemRefresh();
+  }
+
+  detailPageRedirect(item: Item) {
+    this.itemSVC.showItemDetail = item;
+    this.router.navigate(['/details']);
   }
 
   addToCart(item: Item) {

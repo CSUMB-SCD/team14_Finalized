@@ -19,5 +19,6 @@
         <button  mat-raised-button color="primary">Register</button>
         <a [routerLink]="['/signin']" mat-raised-button color="primary">Cancel</a>
     </div>
+    <div *ngIf="is_un_taken">User Taken</div>
 </form>
 

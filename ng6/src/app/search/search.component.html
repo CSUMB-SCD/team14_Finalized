@@ -22,9 +22,9 @@
 
 <div class="search-items" *ngFor="let item of itemSVC.allItems">
 <!-- <div class="search-items" *ngFor="let item of allItems"> -->
-  <h3>{{item.name}}</h3><br>
+  <h3 (click)="detailPageRedirect(item)">{{item.name}}</h3><br>
   <img src='{{item.image}}' height="300" widtd="200" class="center"><br>
-  Description: {{item.description}}<br>
+  <!-- Description: {{item.description}}<br> -->
   Price: ${{item.price}}<br>
   <select *ngIf="item.stock != 0" id="{{item.id}}">
     Quantity:<option *ngFor="let quant of item.quant_arr" value={{quant}}>{{quant}}</option>

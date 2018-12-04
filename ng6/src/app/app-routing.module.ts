@@ -1,3 +1,4 @@
+import { DetailsComponent } from './details/details.component';
 import { CartComponent } from './cart/cart.component';
 import { SearchComponent } from './search/search.component';
 import { NgModule, Component } from '@angular/core';
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: CartComponent
+  },
+  {
+    path: 'details',
+    component: DetailsComponent
   },
   {
     path: '',
