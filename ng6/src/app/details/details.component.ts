@@ -3,30 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
 import * as $ from 'jquery';
 import { Item } from '../items';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss'],
-  animations: [
-    trigger('popOverState', [
-      state('show', style({
-        opacity: 1
-      })),
-      state('hide',   style({
-        opacity: 0
-      })),
-      transition('show => hide', animate('600ms ease-out')),
-      transition('hide => show', animate('1000ms ease-in'))
-    ])
-  ]
 })
 export class DetailsComponent implements OnInit {
   inValidQuant: boolean;
@@ -38,22 +20,6 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  // updateCart() {
-  //   const quant = Number($('#add').val());
-  // }
-
-  get stateName() {
-    return this.show ? 'show' : 'hide';
-  }
-
-  toggle() {
-    this.show = !this.show;
-    this.untoggle();
-  }
-  untoggle() {
-    this.show = !this.show;
   }
 
   updateCart() {
