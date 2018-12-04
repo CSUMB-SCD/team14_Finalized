@@ -32,6 +32,11 @@ export class SigninComponent implements OnInit {
     const passed_in_un = target.querySelector('#username').value;
     const passed_in_pw = target.querySelector('#password').value;
 
+      this.userSVC.getAllUsers().subscribe(data => {
+        this.allUsers = data;
+        console.log(data);
+      });
+
     for (const user of this.allUsers) {
       if (user.userName === passed_in_un && user.password === passed_in_pw) {
         this.is_login_valid = true;
