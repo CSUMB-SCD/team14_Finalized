@@ -1,12 +1,15 @@
-const express = require('express');
+const express = require('express'), path = require('path');
+
 const app = express();
-const path = require('path');
 
-app.use(express.static(__dirname + '/dist/ng6'));
+app.use(express.static('./dist/ng6'));
 
-app.listen(process.env.PORT || 8080);
 
-app.get('/*', () =>{
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname,'/dist/ng6/index.html'));
+})
+
+app.listen(process.env.PORT || 808, () => {
   console.log('Server started');
 })
 
