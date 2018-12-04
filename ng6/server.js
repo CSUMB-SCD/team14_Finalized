@@ -10,7 +10,7 @@ app.get('/*', (req, res) => {
 })
 
 app.listen(process.env.PORT || 808, () => {
-  console.log('Server started');
+  console.log('Server start');
 })
 
 
