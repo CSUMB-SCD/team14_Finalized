@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RegisterComponent } from './register/register.component';
 import { DetailsComponent } from './details/details.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
