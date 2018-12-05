@@ -1,5 +1,9 @@
 .home-login{
-display: flex;
-justify-content: center;
-align-self: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+ngb-carousel {
+  margin: auto; width: 50%; height: auto; margin-top: 2%;
 }

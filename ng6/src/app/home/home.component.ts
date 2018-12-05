@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  images: string[];
 
-  ngOnInit() {
+  //  `pictures/home-${Math.random()}.jpg`);
+
+  constructor() {
   }
 
+  ngOnInit() {
+    this.images = ['home-1.jpg', 'home-2.jpg'];
+  }
 }
